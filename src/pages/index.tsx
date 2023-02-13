@@ -200,7 +200,7 @@ const Home: NextPageWithLayout = () => {
             )}
             {isLoading && (
               <div
-                className="rounded-md bg-white py-1.5 px-4 text-base font-semibold"
+                className="rounded-md bg-white py-1.5 px-4 text-center text-base font-semibold"
                 ref={loadingRef}
               >
                 Please wait a while the GIF is being generated
