@@ -16,7 +16,7 @@ const Navbar = () => {
         </Link>
         <a
           aria-label="navigate to github repo"
-          href="https://github.com/sadmann7/age-tf"
+          href="https://github.com/sadmann7/age-transition"
           target="_blank"
           rel="noreferrer"
           className="flex items-center gap-1.5 font-mono text-base text-white transition-opacity hover:opacity-80 active:opacity-90 sm:text-lg"
