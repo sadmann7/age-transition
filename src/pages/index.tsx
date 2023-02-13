@@ -153,13 +153,14 @@ const Home: NextPageWithLayout = () => {
                   <h2 className="text-lg text-white">Generated GIF</h2>
                   {generatedImage ? (
                     <Image
-                      src={generatedImage}
+                      src={generatedImage as string}
                       alt={imageName ?? "generated"}
                       width={480}
                       height={480}
                       className="rounded-md"
                       priority
                       onLoadingComplete={() => setGeneratedLoaded(true)}
+                      onLoadedMetadata={() => setIsLoading(true)}
                     />
                   ) : (
                     <div className="aspect-square w-full">
@@ -202,7 +203,7 @@ const Home: NextPageWithLayout = () => {
                 className="rounded-md bg-white py-1.5 px-4 text-base font-semibold"
                 ref={loadingRef}
               >
-                Please wait a while the image is being generated
+                Please wait a while the GIF is being generated
               </div>
             )}
           </motion.div>

@@ -15,13 +15,14 @@ const CustomDropzone = ({ onDrop, isUploading }: CustomDropzoneProps) => {
   });
 
   return (
-    <div
+    <button
       {...getRootProps()}
-      className={`grid h-52 w-full max-w-md cursor-pointer place-items-center rounded-md border-2 border-dashed p-2 text-center text-base ${
+      className={`grid h-52 w-full max-w-md cursor-pointer place-items-center rounded-md border-2 border-dashed p-2 text-center text-base disabled:cursor-not-allowed ${
         isDragActive
           ? "border-blue-300 text-blue-300"
           : "border-gray-400 text-white"
       }`}
+      disabled={isUploading}
     >
       <input {...getInputProps()} />
       {isDragActive ? (
@@ -31,7 +32,7 @@ const CustomDropzone = ({ onDrop, isUploading }: CustomDropzoneProps) => {
       ) : (
         <p>Drag {`'n'`} drop image here, or click to select image</p>
       )}
-    </div>
+    </button>
   );
 };
 
